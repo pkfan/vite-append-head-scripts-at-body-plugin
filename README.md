@@ -136,3 +136,46 @@ export default defineConfig({
   // other vite code here
 });
 ```
+
+# Exmaple
+### vite html output result
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/counter.js"></script>
+    <script type="module" crossorigin src="../js/main.js"></script>
+    <title>about App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
+```
+### using this plugin, html output result
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <title>about App</title>
+    
+    <link rel="stylesheet" href="/ass/main-d0964974.css">
+  </head>
+
+  
+  <body>
+    <div id="app"></div>
+  		
+		<script src="../js/counter.js"></script>
+		<script type="module" crossorigin src="/ass/main-26c2ddec.js"></script>
+	</body>
+</html>
+```
