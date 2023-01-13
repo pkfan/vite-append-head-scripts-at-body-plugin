@@ -1,16 +1,16 @@
 # append-head-scripts-at-body-vite-plugin
 
 ### Note
-Your all (<script src='index.js'></script>) tags replace from <head> tags and append at </body> end tag
+Your all (&lt;script src='index.js'&gt;&lt;/script&gt; tags replace from <head> tags and append at &lt;/body&gt; end tag
 
 ## How is this vite plugin work?
 This is a vite plugin coded by Pkfan. This plugin work with follwoing steps:
 
 1) Get html compile result from vite   
-2) Extract/Remove all ( <head>content</head> ) from html   
-3) Extract/Remove all ( <script src=""></script> ) from ( <head>content</head> )
-4) Append all ( <script src=""></script> ) into ( </body> ) end tag
-5) return vite final ( <html> content </html>) result and write into target file
+2) Extract/Remove all ( &lt;head&gt;content&lt;/head&gt; ) from html   
+3) Extract/Remove all ( &lt;script src=""&gt;&lt;/script&gt; ) from ( &lt;head&gt;content&lt;/head&gt; )
+4) Append all ( &lt;script src=""&gt;&lt;/script&gt; ) into ( &lt;/body&gt; ) end tag
+5) return vite final ( &lt;html&gt; content &lt;/html&gt;) result and write into target file
 
 # Follow these steps
 
@@ -128,6 +128,7 @@ export default appendHeadScriptsAtBody;
 // vite.config.js
 
 import { defineConfig } from "vite";
+import appendHeadScriptsAtBody from "./appendHeadScriptsAtBody";
 
 export default defineConfig({
   plugins: [appendHeadScriptsAtBody()],
